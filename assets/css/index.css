@@ -1,0 +1,435 @@
+.loader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  background-color: #000;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.loader.active {
+  display: flex;
+}
+.loader h1 {
+  color: #fff;
+  animation-name: zoom_in_out;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  font-size: 100px;
+}
+
+@keyframes zoom_in_out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+main h1 {
+  color: #ffff;
+  font-size: 80px;
+  opacity: 0;
+  transition: 2s ease all;
+}
+main h1.active {
+  opacity: 1;
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.why_us {
+  min-height: 100vh;
+  padding: 4rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 2s ease all;
+  flex-direction: column;
+}
+.why_us.active {
+  opacity: 1;
+}
+.why_us h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.why_us h1,
+.why_us p {
+  color: #fff;
+}
+.why_us .boxes_wrapper {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 70%;
+}
+.why_us .boxes_wrapper > * {
+  background: #473981;
+
+  border-radius: 10px;
+}
+.why_us .boxes_wrapper p {
+  padding: 2rem;
+  min-height: 370px;
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 600;
+
+  letter-spacing: 0em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* booking_area */
+.booking_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: 2s ease all;
+}
+.booking_area.active {
+  opacity: 1;
+}
+.contact_area {
+  padding-top: 15rem !important;
+}
+.booking_area h1,
+.Pricing h1,
+.contact_area h1 {
+  color: #fff;
+
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 105px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.booking_area,
+.Pricing {
+  padding: 8rem 0rem;
+}
+.booking_area button,
+.contact_area form button,
+.Pricing .pricing_cards > * button {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #404fd9,
+    #a81bff,
+    #a81bff,
+    #570987
+  );
+  box-shadow: 0 4px 15px 0 #a81bff;
+}
+
+.booking_area button:hover,
+.contact_area form button:hover,
+.Pricing .pricing_cards > * button:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.contact_area form button
+/* Pricing */
+.Pricing {
+  opacity: 0;
+  transition: 2s ease all;
+}
+.Pricing.active {
+  opacity: 1;
+}
+.Pricing h1 {
+  color: #fff;
+}
+
+.Pricing .pricing_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 6rem;
+  grid-gap: 2rem;
+}
+.Pricing .pricing_cards > * {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px 0px #ffffffbf;
+  height: 473px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+}
+.Pricing .pricing_cards > * h1 {
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #fff;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.contact_area h1 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: unset;
+}
+.Pricing .pricing_cards > * h1,
+.contact_area h1 span {
+  background: -webkit-linear-gradient(59.7deg, #404fd9 50.4%, #a81bff 67.4%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Pricing .pricing_cards > * .price {
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 700;
+
+  letter-spacing: 0em;
+  text-align: center;
+}
+.Pricing .pricing_cards > * .price span {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.Pricing .pricing_cards > * .avail {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+
+  letter-spacing: 0em;
+  text-align: center;
+  text-align: center;
+}
+.Pricing .pricing_cards > * button {
+  box-shadow: 0px 0px 0px 0px;
+}
+/* contact_area */
+.contact_area {
+  padding: 5rem 0rem;
+
+  transition: 2s ease all;
+}
+
+.contact_area h1 {
+  color: #fff;
+}
+.contact_area form {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+.contact_area form > * + * {
+  margin-top: 30px;
+}
+.contact_area form label {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contact_area form input {
+  display: block;
+  margin-top: 20px;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  height: 60px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  transition: 0.3s ease all;
+  font-size: 17px;
+  color: #fff;
+  padding: 0rem 2rem;
+}
+.contact_area form input:focus {
+  border-color: #a81bff;
+}
+.contact_area .button_wrapper {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* output_area */
+.output_area {
+  margin-top: 5rem;
+  border: 2px solid #ffffff;
+  height: 550px;
+  margin-bottom: 5rem;
+
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+}
+.output_area > textarea {
+  color: #fff;
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+}
+.output_area .copy_icon {
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+  right: 30px;
+}
+
+@media screen and (max-width: 1350px) {
+  .common_width {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1228px) {
+  .Pricing .pricing_cards {
+    grid-template-columns: 1fr;
+  }
+  .contact_area form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1228px) {
+  .why_us .boxes_wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact_area h1,
+  .booking_area h1,
+  .Pricing h1,
+  .contact_area h1,
+  .why_us h1 {
+    font-size: 40px;
+    line-height: unset;
+  }
+  .why_us .boxes_wrapper p {
+    font-size: 30px;
+    line-height: unset;
+  }
+  .booking_area button,
+  .contact_area form button {
+    font-size: 20px;
+    width: 150px;
+    height: 45px;
+    line-height: unset;
+  }
+  .contact_area form label {
+    font-size: 20px;
+  }
+  .contact_area form input {
+    height: 51px;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact_area h1 {
+    width: 100%;
+  }
+  main h1,
+  .loader h1 {
+    font-size: 50px;
+  }
+  header > a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main h1,
+  .loader h1 {
+    font-size: 40px;
+  }
+  header a {
+    font-size: 15px;
+  }
+  header nav > * + * {
+    margin-left: 10px;
+  }
+  .contact_area h1,
+  .booking_area h1,
+  .Pricing h1,
+  .contact_area h1,
+  .why_us h1 {
+    font-size: 25px;
+  }
+  .Pricing .pricing_cards > * h1 {
+    font-size: 25px;
+  }
+  .Pricing .pricing_cards > * .price,
+  .Pricing .pricing_cards > * .avail {
+    font-size: 18px;
+  }
+  .why_us .boxes_wrapper p {
+    font-size: 18px;
+    min-height: 170px;
+  }
+  .Pricing .pricing_cards > * {
+    padding: 2rem;
+  }
+  .Pricing .pricing_cards > * button {
+    font-size: 20px;
+    width: 150px;
+    height: 45px;
+    line-height: unset;
+    margin-top: 2rem;
+  }
+  .Pricing .pricing_cards > * {
+    height: 100%;
+  }
+  .contact_area form label {
+    font-size: 15px;
+  }
+  .output_area {
+    height: 500px;
+  }
+  .booking_area,
+  .Pricing {
+    padding: 2rem 0rem;
+  }
+  .booking_area button {
+    margin-top: 2rem;
+  }
+}
